@@ -1,7 +1,7 @@
-require_relative './concerns/concerns.rb'
+require_relative './concerns/findable.rb'
 
 class Artist
-  extend Concerns::Findable
+  extend Findable::ClassMethods
   attr_accessor :name
   attr_reader :songs
   @@all = []
