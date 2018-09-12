@@ -31,11 +31,9 @@ class MusicLibraryController
         list_artists
       when "list genres"
         list_genres
-<<<<<<< HEAD
       when "list artist"
         list_songs_by_artist
       when "list genre"
-=======
       when "list by artist"
         list_songs_by_artist
       when "list by genre"
