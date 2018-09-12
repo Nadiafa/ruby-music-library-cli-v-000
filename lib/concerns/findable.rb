@@ -1,6 +1,5 @@
-module Concerns
-  #class methods module (extend)
-  module Findable
+module Findable
+  module ClassMethods
     def find_by_name(the_name)
       self.all.find { |song| song.name == the_name}
     end
