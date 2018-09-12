@@ -6,12 +6,17 @@ class MusicLibraryController
 
   def call
     puts "Welcome to your music library!"
+<<<<<<< HEAD
     input = ""
+=======
+    system "clear"
+    input = nil
+>>>>>>> 872954f00db905ea153bc020ca67659a096d4963
     while input != "exit"
       puts "To list all of your songs, enter 'list songs'."
       puts "To list all of the artists in your library, enter 'list artists'."
       puts "To list all of the genres in your library, enter 'list genres'."
-      puts "To list all of the songs by a particular artist, enter 'list artist'."
+      puts "To list all of the songs by a particular artist, enter 'list by artist'."
       puts "To list all of the songs of a particular genre, enter 'list genre'."
       puts "To play a song, enter 'play song'."
       puts "To quit, type 'exit'."
@@ -26,12 +31,20 @@ class MusicLibraryController
         list_artists
       when "list genres"
         list_genres
+<<<<<<< HEAD
       when "list artist"
         list_songs_by_artist
       when "list genre"
+=======
+      when "list by artist"
+        list_songs_by_artist
+      when "list by genre"
+>>>>>>> 872954f00db905ea153bc020ca67659a096d4963
         list_songs_by_genre
       when "play song"
         play_song
+      else
+        call
       end
     end
   end
@@ -73,6 +86,12 @@ class MusicLibraryController
     if (1..Song.all.length).include?(input)
       song = Song.all.sort { |a, b| a.name <=> b.name }[input-1]
     end
+<<<<<<< HEAD
     puts "Playing #{song.name} by #{song.artist.name}" if song
+=======
+
+    puts "Playing #{song.name} by #{song.artist.name}" if song
+
+>>>>>>> 872954f00db905ea153bc020ca67659a096d4963
   end
 end
